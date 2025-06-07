@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* optional but helpful */
+   scroll-behavior: smooth;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white }
+}
+
+.typewriter-text {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 2px solid white;
+  text-align: center;
+  margin: 0 auto; /* Center the growing block */
+  animation:
+    typing 4s steps(50, end) forwards, /* ⬅ slower & smoother */
+    blink-caret 0.75s step-end infinite;
+}
