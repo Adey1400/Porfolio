@@ -1,8 +1,25 @@
 import React from "react";
-
+import { useState,useEffect } from "react";
 const Navbar = () => {
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check local storage or default to false
+    return localStorage.getItem("darkMode") === "true" || false;
+  });
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
+
   return (
+    
+
     <nav className="w-screen bg-white shadow">
+        
       <div className="flex items-center px-4 py-3 sm:px-6 md:py-4 max-w-screen-xl mx-auto w-full relative">
         {/* Left - Logo */}
         <div className="flex-shrink-0">

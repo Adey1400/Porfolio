@@ -1,11 +1,59 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   FaGithub,
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+
 function Contact() {
+  const fullText = `I’m actively looking for opportunities where I can contribute and grow. Please feel free to reach out if you have any openings or collaborations in mind.`;
+  const [typedText, setTypedText] = useState("");
+  const [startedTyping, setStartedTyping] = useState(false);
+  const textRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setStartedTyping(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => {
+      if (textRef.current) {
+        observer.unobserve(textRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+  if (!startedTyping) return;
+
+  let currentIndex = 0;
+  setTypedText(""); // reset
+
+  const interval = setInterval(() => {
+    if (currentIndex < fullText.length) {
+      setTypedText((prev) => prev + fullText.charAt(currentIndex));
+      currentIndex++;
+    } else {
+      clearInterval(interval);
+    }
+  }, 40);
+
+  return () => clearInterval(interval);
+}, [startedTyping]);
+
   return (
     <div className="w-full h-80  flex flex-col items-center  px-4 text-center">
       <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-15 px-4 sm:px-6">
@@ -15,12 +63,10 @@ function Contact() {
         </span>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
-      <div className="w-[45%] flex flex-col items-center justify-center">
-        <span>
-          I’m actively looking for opportunities where I can contribute and
-          grow. Please feel free to reach out if you have any openings or
-          collaborations in mind.
-        </span>
+      <div className="w-[45%] flex flex-col items-center justify-center text-gray-700">
+        {/* Add ref here and show typedText */}
+        <span ref={textRef}>{typedText || fullText[0]}</span>
+
         <button
           className=" w-1/3 my-5 border border-gray-300 text-xs sm:text-sm md:text-base text-gray-800 px-3 sm:px-4 py-1 sm:py-2 rounded shadow-sm 
                              hover:bg-gray-300 hover:scale-105 transition duration-200 ease-in-out"

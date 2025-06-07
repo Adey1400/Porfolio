@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useEffect,useRef, useState } from 'react';
 const projects = [
   {
     name: 'Pizza Landing Page',
@@ -46,14 +46,47 @@ const projects = [
 ];
 
 const Projects = () => {
+   const sectionRef = useRef(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="bg-gray-200 py-12 px-6 md:px-16" id="projects">
+    <section
+      ref={sectionRef}
+      id="projects"
+      className={`bg-gray-200 py-12 px-6 md:px-16 transition-opacity duration-[1500ms] ease-in-out transform ${
+        visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+      }`}
+    >
       <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
         <div className="flex-grow border-t border-gray-300"></div>
         <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
           Projects
         </span>
-     <div className="flex-grow border-t border-gray-300"></div>
+        <div className="flex-grow border-t border-gray-300"></div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
         {projects.map((project, index) => (
@@ -83,7 +116,7 @@ const Projects = () => {
         ))}
       </div>
     </section>
-  );
+  )
 };
 
 export default Projects;
