@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 text-center">
+    <div className="w-full h-140 flex flex-col items-center justify-center px-4 text-center">
       <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl ">
         Hi, I'm Subhankito Roy Choudhury
       </div>
