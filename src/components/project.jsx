@@ -1,49 +1,57 @@
 import React from 'react';
-import { useEffect,useRef, useState } from 'react';
+import captchaImage from '../assets/CAPTCHA_Alamy.webp';
+import dataWallpaper from '../assets/Data-HD-Wallpaper.jpg';
+import weatherIcon from '../assets/Google-Weather-icon.avif';
+import Tictactoe from '../assets/unnamed.png';
+import Password from '../assets/thumb_720_450_f_7.jpg';
+import Pizza from '../assets/images.jpeg';
+import { useEffect, useRef, useState } from 'react';
+
 const projects = [
   {
     name: 'Pizza Landing Page',
     tech: 'HTML, CSS, JavaScript',
-    image: 'src/assets/images.jpeg',
+    image: Pizza,
     description: 'A sleek landing page for a fictional pizza brand with engaging UI and smooth interactions.',
     github: 'https://github.com/Adey1400/pizza-landing-page',
   },
   {
     name: 'Password Generator',
     tech: 'React, Tailwind CSS',
-    image: 'src/assets/thumb_720_450_f_7.jpg',
+    image: Password,
     description: 'A customizable password generator with copy functionality and a clean, animated UI.',
     github: 'https://github.com/Adey1400/password_generator',
   },
   {
     name: 'Captcha Validator',
     tech: 'HTML, CSS, JavaScript',
-    image: 'src/assets/CAPTCHA_Alamy.webp',
+    image: captchaImage,
     description: 'A functional Captcha generator with refresh option and minimal UI validation.',
     github: 'https://github.com/Adey1400/CAPTCHA',
   },
   {
     name: 'Tic Tac Toe Game',
     tech: 'HTML, CSS, JavaScript',
-    image: 'src/assets/unnamed.png',
+    image: Tictactoe,
     description: 'Classic tic-tac-toe game with smooth gameplay logic and basic AI support.',
     github: 'https://github.com/Adey1400/tic_tac_toe',
   },
   {
     name: 'Dummy Data Generator',
     tech: 'MongoDB, Mongoose, Express.js',
-    image: 'src/assets/Data-HD-Wallpaper.jpg',
+    image: dataWallpaper,
     description: 'A backend API that seeds and returns dummy data for development and testing.',
     github: 'https://github.com/Adey1400/DummyJobGenerator',
   },
   {
     name: 'Weather App',
     tech: 'HTML, CSS, JS (OpenWeather API)',
-    image: 'src/assets/Google-Weather-icon.avif',
+    image: weatherIcon,
     description: 'Real-time weather app using OpenWeather API with minimal layout and responsive design.',
     github: 'https://github.com/Adey1400/weather_app',
   },
 ];
+
 
 const Projects = () => {
    const sectionRef = useRef(null);

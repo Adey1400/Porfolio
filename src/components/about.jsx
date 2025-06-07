@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Profilephoto from "../assets/ProfileImage.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -53,7 +54,7 @@ const About = () => {
         <div className="md:w-1/2 flex justify-center items-center p-2 sm:p-4">
           <img
             className="w-full max-w-md aspect-square object-cover rounded-md"
-            src="src/assets/telegram-cloud-photo-size-5-6206512851695289344-y.jpg"
+            src={Profilephoto}
             alt="Subhankito"
           />
         </div>

@@ -1,5 +1,9 @@
 import React from "react";
 import { useState,useEffect } from "react";
+import profileImage from '../assets/profile.png';
+
+
+
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => {
     // Check local storage or default to false
@@ -24,7 +28,7 @@ const Navbar = () => {
         {/* Left - Logo */}
         <div className="flex-shrink-0">
           <a href="#home">
-            <img className="w-8 sm:w-10" src="src/assets/image.png" alt="Logo" />
+            <img className="w-8 sm:w-10" src={profileImage} alt="Logo" />
           </a>
         </div>
 
