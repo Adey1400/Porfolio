@@ -2,7 +2,7 @@ import React from "react";
 
 import dataWallpaper from "../assets/Data-HD-Wallpaper.jpg";
 import weatherIcon from "../assets/Google-Weather-icon.avif";
-import Tictactoe from "../assets/unnamed.png";
+import BlogImage from "../assets/photo-1515378791036-0648a3ef77b2.jpeg"
 import Password from "../assets/thumb_720_450_f_7.jpg";
 import Pizza from "../assets/images.jpeg";
 import ToDoImage from "../assets/ToDo.jpg"
@@ -28,18 +28,18 @@ const projects = [
   {
     name: "Todo App",
     tech: "React, Redux Toolkit, Tailwind CSS",
-    image: ToDoImage, 
+    image: ToDoImage,
     description:
       "A clean and responsive Todo app with state management using Redux Toolkit, data persistence with local storage, and animated UI for smooth user interactions.",
     github: "https://github.com/Adey1400/To_Do",
   },
   {
-    name: "Tic Tac Toe Game",
-    tech: "HTML, CSS, JavaScript",
-    image: Tictactoe,
+    name: "React Blog App (Phase 1)",
+    tech: "React, Vite, Appwrite, Tailwind CSS",
+    image: BlogImage, // Replace with actual import or path
     description:
-      "Classic tic-tac-toe game with smooth gameplay logic and basic AI support.",
-    github: "https://github.com/Adey1400/tic_tac_toe",
+      "A full-stack blog app with authentication using Appwrite, protected routes, responsive UI, and Vercel deployment. Database integration coming soon!",
+    github: "https://github.com/Adey1400/react-blog-app", // Replace with actual repo
   },
   {
     name: "Dummy Data Generator",
