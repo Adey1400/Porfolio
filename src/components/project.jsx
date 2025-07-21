@@ -4,18 +4,19 @@ import dataWallpaper from "../assets/Data-HD-Wallpaper.jpg";
 import weatherIcon from "../assets/Google-Weather-icon.avif";
 import BlogImage from "../assets/photo-1515378791036-0648a3ef77b2.jpeg"
 import Password from "../assets/thumb_720_450_f_7.jpg";
-import Pizza from "../assets/images.jpeg";
+import ChatImage from "../assets/webchat-online.png"
 import ToDoImage from "../assets/ToDo.jpg"
+import contactImage from "../assets/Contact.jpg"
 import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    name: "Pizza Landing Page",
-    tech: "HTML, CSS, JavaScript",
-    image: Pizza,
+    name: "Contact Manager App",
+    tech: "React, Appwrite, Tailwind CSS",
+    image: contactImage, 
     description:
-      "A sleek landing page for a fictional pizza brand with engaging UI and smooth interactions.",
-    github: "https://github.com/Adey1400/pizza-landing-page",
+      "A full-stack contact manager with real-time updates, private user-based CRUD operations using Appwrite, and toast notifications. Built with React and styled using Tailwind.",
+    github: "https://github.com/Adey1400/Contact_page", 
   },
   {
     name: "Password Generator",
@@ -50,12 +51,12 @@ const projects = [
     github: "https://github.com/Adey1400/DummyJobGenerator",
   },
   {
-    name: "Weather App",
-    tech: "HTML, CSS, JS (OpenWeather API)",
-    image: weatherIcon,
+     name: "ChatBox App",
+  tech: "React, Appwrite, Tailwind CSS",
+    image: ChatImage,
     description:
-      "Real-time weather app using OpenWeather API with minimal layout and responsive design.",
-    github: "https://github.com/Adey1400/weather_app",
+     "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services and React for UI with Tailwind styling.",
+    github: "https://github.com/Adey1400/ChatBox",
   },
 ];
 
