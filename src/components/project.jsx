@@ -50,7 +50,8 @@ const projects = [
   image: newsAppImage,
   description:
     "A responsive React-based news application with live category filters, search, animations, and detailed article view using Appwrite and a news API.",
-  github: "https://github.com/Adey1400/Newsify", // update if your repo URL is different
+  github: "https://github.com/Adey1400/Newsify",
+   demo: "https://newsify-rho.vercel.app", // update if your repo URL is different
 }
 ,
   {

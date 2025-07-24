@@ -3,7 +3,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaGitAlt 
 } from "react-icons/fa";
 import { 
-  SiTailwindcss, SiC, SiGithub, SiMongodb, SiExpress 
+  SiTailwindcss, SiC, SiGithub, SiMongodb, SiExpress , SiAppwrite
 } from "react-icons/si";
 
 const skills = [
@@ -18,6 +18,7 @@ const skills = [
   { name: "GitHub", icon: <SiGithub size={40} /> },
   { name: "MongoDB", icon: <SiMongodb size={40} /> },
   { name: "Express.js", icon: <SiExpress size={40} /> },
+   { name: "Appwrite", icon: <SiAppwrite size={40} /> },
 ];
 
 const Skills = () => {
