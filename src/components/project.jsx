@@ -1,7 +1,6 @@
 import React from "react";
 
-import dataWallpaper from "../assets/Data-HD-Wallpaper.jpg";
-import weatherIcon from "../assets/Google-Weather-icon.avif";
+import newsAppImage from "../assets/News.webp";
 import BlogImage from "../assets/photo-1515378791036-0648a3ef77b2.jpeg";
 import Password from "../assets/thumb_720_450_f_7.jpg";
 import ChatImage from "../assets/webchat-online.png";
@@ -14,15 +13,17 @@ const projects = [
     name: "Contact Manager App",
     tech: "React, Appwrite, Tailwind CSS",
     image: contactImage,
-    description: "A full-stack contact manager with real-time updates, private user-based CRUD operations using Appwrite, and toast notifications. Built with React and styled using Tailwind.",
+    description:
+      "A full-stack contact manager with real-time updates, private user-based CRUD operations using Appwrite, and toast notifications. Built with React and styled using Tailwind.",
     github: "https://github.com/Adey1400/Contact_page",
-    demo: "https://contact-page-blue-theta.vercel.app", 
+    demo: "https://contact-page-blue-theta.vercel.app",
   },
   {
     name: "Password Generator",
     tech: "React, Tailwind CSS",
     image: Password,
-    description: "A customizable password generator with copy functionality and a clean, animated UI.",
+    description:
+      "A customizable password generator with copy functionality and a clean, animated UI.",
     github: "https://github.com/Adey1400/password_generator",
     demo: "https://password-generator-rosy-alpha.vercel.app",
   },
@@ -30,35 +31,38 @@ const projects = [
     name: "Todo App",
     tech: "React, Redux Toolkit, Tailwind CSS",
     image: ToDoImage,
-    description: "A clean and responsive Todo app with state management using Redux Toolkit, data persistence with local storage, and animated UI for smooth user interactions.",
+    description:
+      "A clean and responsive Todo app with state management using Redux Toolkit, data persistence with local storage, and animated UI for smooth user interactions.",
     github: "https://github.com/Adey1400/To_Do",
-
   },
   {
-    name: "React Blog App (Phase 1)",
+    name: "React Blog App ",
     tech: "React, Vite, Appwrite, Tailwind CSS",
     image: BlogImage,
-    description: "A full-stack blog app with authentication using Appwrite, protected routes, responsive UI, and Vercel deployment. Database integration coming soon!",
+    description:
+      "A full-stack blog app with Appwrite authentication, protected routes, responsive UI, and blog CRUD functionality. Features include image uploads, rich text editing with TinyMCE, and user-specific content views. Deployed on Vercel.",
     github: "https://github.com/Adey1400/react-blog-app",
     demo: "https://simple-blog-ochre.vercel.app/login",
   },
   {
-    name: "Dummy Data Generator",
-    tech: "MongoDB, Mongoose, Express.js",
-    image: dataWallpaper,
-    description: "A backend API that seeds and returns dummy data for development and testing.",
-    github: "https://github.com/Adey1400/DummyJobGenerator",
-  },
+  name: "Newsify - React News App",
+  tech: "React, Tailwind CSS,  News API",
+  image: newsAppImage,
+  description:
+    "A responsive React-based news application with live category filters, search, animations, and detailed article view using Appwrite and a news API.",
+  github: "https://github.com/Adey1400/Newsify", // update if your repo URL is different
+}
+,
   {
     name: "ChatBox App",
     tech: "React, Appwrite, Tailwind CSS",
     image: ChatImage,
-    description: "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services and React for UI with Tailwind styling.",
+    description:
+      "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services and React for UI with Tailwind styling.",
     github: "https://github.com/Adey1400/ChatBox",
     demo: "https://chat-box-two-iota.vercel.app",
   },
 ];
-
 
 const Projects = () => {
   const sectionRef = useRef(null);
