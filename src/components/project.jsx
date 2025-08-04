@@ -46,13 +46,14 @@ const projects = [
   },
   {
   name: "Newsify - React News App",
-  tech: "React, Tailwind CSS,  News API",
+  tech: "React, Redux Toolkit, Tailwind CSS, News API",
   image: newsAppImage,
   description:
-    "A responsive React-based news application with live category filters, search, animations, and detailed article view using Appwrite and a news API.",
+    "A responsive and category-driven news application built with React and Redux Toolkit. It features real-time news fetching using News API, smooth category filtering, modern UI with Tailwind CSS, and detailed article views.",
   github: "https://github.com/Adey1400/Newsify",
-   demo: "https://newsify-rho.vercel.app", // update if your repo URL is different
+  demo: "https://newsify-rho.vercel.app"
 }
+
 ,
   {
     name: "ChatBox App",
