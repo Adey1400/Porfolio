@@ -34,7 +34,7 @@ const About = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col md:flex-row w-11/12 max-w-5xl mx-auto my-8 gap-8 md:gap-12 px-4 sm:px-6">
+      <div className="flex flex-col-reverse md:flex-row w-11/12 max-w-5xl mx-auto my-8 gap-8 md:gap-12 px-4 sm:px-6">
         {/* Text block */}
         <div className="md:w-1/2 space-y-6 text-justify text-sm sm:text-base leading-relaxed">
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700">
@@ -51,9 +51,9 @@ const About = () => {
         </div>
 
         {/* Image block */}
-        <div className="md:w-1/2 flex justify-center items-center p-2 sm:p-4">
+        <div className="w-full md:w-1/2 flex justify-center items-center">
           <img
-            className="w-full max-w-md aspect-square object-cover rounded-md"
+            className="w-full rounded-md aspect-square object-cover"
             src={Profilephoto}
             alt="Subhankito"
           />
