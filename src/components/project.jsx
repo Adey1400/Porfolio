@@ -16,7 +16,7 @@ const projects = [
     description:
       "A full-stack contact manager with real-time updates, private user-based CRUD operations using Appwrite, and toast notifications. Built with React and styled using Tailwind.",
     github: "https://github.com/Adey1400/Contact_page",
-    demo: "https://contact-page-blue-theta.vercel.app",
+
   },
   {
     name: "Password Generator",
@@ -62,7 +62,7 @@ const projects = [
     description:
       "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services and React for UI with Tailwind styling.",
     github: "https://github.com/Adey1400/ChatBox",
-    demo: "https://chat-box-two-iota.vercel.app",
+
   },
 ];
 
