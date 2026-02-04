@@ -6,6 +6,7 @@ import Password from "../assets/thumb_720_450_f_7.jpg";
 import ChatImage from "../assets/webchat-online.png";
 import ToDoImage from "../assets/ToDo.jpg";
 import contactImage from "../assets/Contact.jpg";
+import Library from "../assets/Library.jpg"
 import { useEffect, useRef, useState } from "react";
 
 const projects = [
@@ -19,13 +20,12 @@ const projects = [
 
   },
   {
-    name: "Password Generator",
-    tech: "React, Tailwind CSS",
-    image: Password,
+  name: "Library Management System",
+    tech: "React, Spring Boot, PostgreSQL, Tailwind CSS",
+    image: Library,
     description:
-      "A customizable password generator with copy functionality and a clean, animated UI.",
-    github: "https://github.com/Adey1400/password_generator",
-    demo: "https://password-generator-rosy-alpha.vercel.app",
+      "A robust full-stack system featuring secure JWT authentication, role-based dashboards for Librarians and Students, and automated book issuing workflows. Built with a Spring Boot backend and React frontend.",
+    github: "https://github.com/Adey1400/library_management",
   },
   {
     name: "Todo App",

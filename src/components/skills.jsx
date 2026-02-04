@@ -3,7 +3,7 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaGitAlt 
 } from "react-icons/fa";
 import { 
-  SiTailwindcss, SiC, SiGithub, SiMongodb, SiExpress , SiAppwrite
+  SiTailwindcss, SiPostgresql, SiGithub, SiMongodb, SiSpringboot, SiAppwrite
 } from "react-icons/si";
 
 const skills = [
@@ -13,12 +13,12 @@ const skills = [
   { name: "React", icon: <FaReact size={40} /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss size={40} /> },
   { name: "Java", icon: <FaJava size={40} /> },
-  { name: "C", icon: <SiC size={40} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={40} /> },
   { name: "Git", icon: <FaGitAlt size={40} /> },
   { name: "GitHub", icon: <SiGithub size={40} /> },
   { name: "MongoDB", icon: <SiMongodb size={40} /> },
-  { name: "Express.js", icon: <SiExpress size={40} /> },
-   { name: "Appwrite", icon: <SiAppwrite size={40} /> },
+  { name: "Spring Boot", icon: <SiSpringboot size={40} /> },
+  { name: "Appwrite", icon: <SiAppwrite size={40} /> },
 ];
 
 const Skills = () => {
