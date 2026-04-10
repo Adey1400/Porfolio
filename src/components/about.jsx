@@ -38,11 +38,11 @@ const About = () => {
         {/* Text block */}
         <div className="md:w-1/2 space-y-6 text-justify text-sm sm:text-base leading-relaxed">
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700">
-            I'm a B.Tech student in Information Technology at Narula Institute of Technology, passionate about building intuitive web applications. I have experience with C, Java, HTML, CSS, JavaScript, and React, and I'm currently focused on becoming a skilled full-stack developer.
+            I'm a 2nd-year B.Tech student in Information Technology at Narula Institute of Technology, and a backend-focused developer with strong fundamentals. My core stack includes Java, Spring Boot, React, and PostgreSQL, which I leverage to build scalable and efficient applications. With a solid grasp of database architecture—including data modeling, ACID properties, and normalization—I focus on creating robust backend systems alongside intuitive frontends.
           </p>
 
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 delay-100">
-            Alongside web development, I’m learning Data Structures and Algorithms in Java to strengthen my problem-solving skills. I enjoy turning ideas into functional, user-friendly projects and aim to secure a role where I can contribute meaningfully while continuing to grow.
+            I practice Data Structures and Algorithms in Java daily to sharpen my problem-solving skills and stay ahead of the curve. I enjoy taking complex problems and converting them into elegant, performant solutions while maintaining clean code standards.
           </p>
 
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 delay-200">
