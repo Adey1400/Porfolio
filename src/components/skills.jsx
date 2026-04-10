@@ -1,38 +1,41 @@
 import React from "react";
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaGitAlt 
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaGitAlt, FaServer, FaLink
 } from "react-icons/fa";
 import { 
-  SiTailwindcss, SiPostgresql, SiGithub, SiMongodb, SiSpringboot, SiAppwrite
+  SiTailwindcss, SiPostgresql, SiGithub, SiMongodb, SiSpringboot, SiPostman, SiHibernate
 } from "react-icons/si";
 
 const skills = [
+  { name: "Java", icon: <FaJava size={40} /> },
+  { name: "Spring Boot", icon: <SiSpringboot size={40} /> },
+  { name: "PostgreSQL", icon: <SiPostgresql size={40} /> },
+  { name: "MongoDB", icon: <SiMongodb size={40} /> },
+  { name: "REST APIs", icon: <FaServer size={40} /> },
+  { name: "JPA/Hibernate", icon: <SiHibernate size={40} /> },
+  { name: "WebSockets", icon: <FaLink size={40} /> },
+  { name: "React", icon: <FaReact size={40} /> },
+  { name: "JavaScript", icon: <FaJs size={40} /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss size={40} /> },
   { name: "HTML", icon: <FaHtml5 size={40} /> },
   { name: "CSS", icon: <FaCss3Alt size={40} /> },
-  { name: "JavaScript", icon: <FaJs size={40} /> },
-  { name: "React", icon: <FaReact size={40} /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss size={40} /> },
-  { name: "Java", icon: <FaJava size={40} /> },
-  { name: "PostgreSQL", icon: <SiPostgresql size={40} /> },
   { name: "Git", icon: <FaGitAlt size={40} /> },
   { name: "GitHub", icon: <SiGithub size={40} /> },
-  { name: "MongoDB", icon: <SiMongodb size={40} /> },
-  { name: "Spring Boot", icon: <SiSpringboot size={40} /> },
-  { name: "Appwrite", icon: <SiAppwrite size={40} /> },
+  { name: "Postman", icon: <SiPostman size={40} /> },
 ];
 
 const Skills = () => {
   return (
     <section className="bg-white text-gray-700 py-12">
       <div className="max-w-5xl mx-auto px-4 text-center">
-         <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
-          My Skills
-        </span>
-     <div className="flex-grow border-t border-gray-300"></div>
-      </div>
-        
+        <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
+          <div className="flex-grow border-t border-gray-300"></div>
+          <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
+            My Skills
+          </span>
+          <div className="flex-grow border-t border-gray-300"></div>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
             <div

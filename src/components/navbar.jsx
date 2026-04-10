@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import profileImage from "../assets/profile.png";
+import Resume from "../assets/Resume.pdf";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
@@ -32,6 +33,11 @@ const Navbar = () => {
         </a>
       </li>
       <li>
+        <a href="#certificates" className="hover:text-gray-400 whitespace-nowrap block py-2 sm:py-0">
+          Certificates
+        </a>
+      </li>
+      <li>
         <a href="#contact" className="hover:text-gray-400 whitespace-nowrap block py-2 sm:py-0">
           Contact
         </a>
@@ -56,9 +62,14 @@ const Navbar = () => {
 
         {/* Right - Buttons */}
         <div className="hidden sm:flex justify-end space-x-3 ml-auto">
-          <button className="border border-gray-300 text-xs sm:text-sm md:text-base px-3 py-1 rounded hover:bg-gray-300 transition duration-200">
+          <a
+            href={Resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-gray-300 text-xs sm:text-sm md:text-base px-3 py-1 rounded hover:bg-gray-300 transition duration-200"
+          >
             Resume
-          </button>
+          </a>
           <a
             href="https://www.linkedin.com/in/subhankito-roy-choudhury-96144a314/"
             target="_blank"
@@ -83,9 +94,14 @@ const Navbar = () => {
           <ul className="flex flex-col space-y-2 text-sm border-t pt-4">
             {navLinks}
             <li className="pt-2">
-              <button className="w-full border border-gray-300 text-sm px-3 py-2 rounded hover:bg-gray-300 transition duration-200">
+              <a
+                href={Resume}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-center border border-gray-300 text-sm px-3 py-2 rounded hover:bg-gray-300 transition duration-200"
+              >
                 Resume
-              </button>
+              </a>
             </li>
             <li>
               <a

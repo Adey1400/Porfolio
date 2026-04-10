@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Skills from './components/skills'
 import Contact from './components/contact'
 import Projects from './components/project'
+import Certificates from './components/certificates'
 function App() {
   const [count, setCount] = useState(0)
   return (
@@ -18,7 +19,8 @@ function App() {
         <section id="home"><Home /></section>
         <section id="about"><About /></section>
         <section id="skills"><Skills /></section>
-        <section id="project"><Projects/></section>
+        <section id="projects"><Projects/></section>
+        <section id="certificates"><Certificates /></section>
         <section id="contact"><Contact/></section>
       </main>
     </div>
