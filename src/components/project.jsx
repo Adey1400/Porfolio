@@ -2,68 +2,67 @@ import React from "react";
 
 import newsAppImage from "../assets/News.webp";
 import BlogImage from "../assets/photo-1515378791036-0648a3ef77b2.jpeg";
-import Password from "../assets/thumb_720_450_f_7.jpg";
+import PasswordImage from "../assets/thumb_720_450_f_7.jpg";
 import ChatImage from "../assets/webchat-online.png";
-import ToDoImage from "../assets/ToDo.jpg";
-import contactImage from "../assets/Contact.jpg";
+
 import Library from "../assets/Library.jpg"
+import AetherVault from "../assets/AetherVault.jpg"
 import { useEffect, useRef, useState } from "react";
+import { Github, ExternalLink } from "lucide-react";
 
 const projects = [
   {
-    name: "Contact Manager App",
-    tech: "React, Appwrite, Tailwind CSS",
-    image: contactImage,
+    name: "AetherVault",
+    tech: "React, Spring Boot, PostgreSQL, Tailwind CSS, Framer Motion",
+    image: AetherVault,
     description:
-      "A full-stack contact manager with real-time updates, private user-based CRUD operations using Appwrite, and toast notifications. Built with React and styled using Tailwind.",
-    github: "https://github.com/Adey1400/Contact_page",
-
+      "A highly secure, zero-knowledge password manager. Features client-side AES-256 encryption so the backend only stores mathematical blobs. Includes dual authentication (JWT & Google OAuth2) and a dynamic UI.",
+    github: "https://github.com/Adey1400/AetherVault",
   },
   {
-  name: "Library Management System",
+    name: "Library Management System",
     tech: "React, Spring Boot, PostgreSQL, Tailwind CSS",
     image: Library,
     description:
-      "A robust full-stack system featuring secure JWT authentication, role-based dashboards for Librarians and Students, and automated book issuing workflows. Built with a Spring Boot backend and React frontend.",
+      "A robust full-stack system featuring secure JWT authentication, role-based dashboards for Librarians and Students, and automated book issuing workflows. Built with a Spring Boot backend.",
     github: "https://github.com/Adey1400/library_management",
   },
   {
-    name: "Todo App",
-    tech: "React, Redux Toolkit, Tailwind CSS",
-    image: ToDoImage,
-    description:
-      "A clean and responsive Todo app with state management using Redux Toolkit, data persistence with local storage, and animated UI for smooth user interactions.",
-    github: "https://github.com/Adey1400/To_Do",
-  },
-  {
-    name: "React Blog App ",
+    name: "React Blog App",
     tech: "React, Vite, Appwrite, Tailwind CSS",
     image: BlogImage,
     description:
-      "A full-stack blog app with Appwrite authentication, protected routes, responsive UI, and blog CRUD functionality. Features include image uploads, rich text editing with TinyMCE, and user-specific content views. Deployed on Vercel.",
+      "A full-stack blog app with Appwrite authentication, protected routes, responsive UI, and blog CRUD functionality. Features include image uploads and rich text editing.",
     github: "https://github.com/Adey1400/react-blog-app",
     demo: "https://simple-blog-ochre.vercel.app/login",
   },
   {
-  name: "Newsify - React News App",
-  tech: "React, Redux Toolkit, Tailwind CSS, News API",
-  image: newsAppImage,
-  description:
-    "A responsive and category-driven news application built with React and Redux Toolkit. It features real-time news fetching using News API, smooth category filtering, modern UI with Tailwind CSS, and detailed article views.",
-  github: "https://github.com/Adey1400/Newsify",
-  demo: "https://newsify-rho.vercel.app"
-}
+    name: "Newsify - React News App",
+    tech: "React, Redux Toolkit, Tailwind CSS, News API",
+    image: newsAppImage,
+    description:
+      "A responsive news application built with React and Redux Toolkit. It features real-time news fetching using News API, smooth category filtering, and modern UI.",
+    github: "https://github.com/Adey1400/Newsify",
+    demo: "https://newsify-rho.vercel.app"
+  },
 
-,
   {
     name: "ChatBox App",
     tech: "React, Appwrite, Tailwind CSS",
     image: ChatImage,
     description:
-      "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services and React for UI with Tailwind styling.",
+      "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services.",
     github: "https://github.com/Adey1400/ChatBox",
-
   },
+  {
+    name: "Password Generator",
+    tech: "JavaScript, HTML, CSS",
+    image: PasswordImage,
+    description:
+      "A simple yet powerful password generator tool that allows users to customize length and character types for secure passwords.",
+    github: "https://github.com/Adey1400/Password-Generator",
+  },
+
 ];
 
 const Projects = () => {
@@ -98,57 +97,67 @@ const Projects = () => {
     <section
       ref={sectionRef}
       id="projects"
-      className={`bg-gray-200 py-12 px-6 md:px-16 transition-opacity duration-[1500ms] ease-in-out transform ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+      className={`bg-gray-100 dark:bg-gray-900 py-20 px-6 md:px-16 transition-all duration-1000 ease-in-out ${
+        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
-          Projects
+      <div className="w-11/12 max-w-6xl mx-auto flex items-center justify-center mb-16">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
+        <span className="mx-6 text-gray-800 dark:text-gray-100 text-3xl sm:text-4xl font-bold tracking-tight">
+          Featured Projects
         </span>
-        <div className="flex-grow border-t border-gray-300"></div>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
       </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
 
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow hover:shadow-md transition duration-300 text-sm"
+            className="group relative bg-white dark:bg-gray-950 rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-800 flex flex-col"
           >
-            <img
-              src={project.image}
-              alt={project.name}
-              className="w-full h-40 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">
+            {/* Image Section with Overlay */}
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                <p className="text-white text-sm font-medium leading-snug">
+                  {project.tech}
+                </p>
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div className="p-6 flex flex-col flex-grow">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 {project.name}
               </h3>
-              <p className="text-xs text-gray-500 italic mb-1">
-                {project.tech}
-              </p>
-              <p className="text-gray-600 text-sm mb-3">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">
                 {project.description}
               </p>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block border border-gray-800 text-gray-800 px-3 py-1.5 rounded-full text-xs font-medium hover:bg-gray-800 hover:text-white transition-all duration-200 mr-2"
-              >
-                📁 GitHub Repo
-              </a>
-              {project.demo && (
+              
+              <div className="flex items-center gap-4 pt-4 border-t border-gray-50 dark:border-gray-900">
                 <a
-                  href={project.demo}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block border border-gray-800 text-gray-800 px-3 py-1.5 rounded-full text-xs font-medium hover:bg-gray-800 hover:text-white transition-all duration-200"
+                  className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm font-semibold"
                 >
-                  🚀 Live Demo
+                  <Github size={18} /> Code
                 </a>
-              )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm font-semibold"
+                  >
+                    <ExternalLink size={18} /> Demo
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}

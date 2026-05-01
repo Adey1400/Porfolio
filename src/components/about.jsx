@@ -23,20 +23,20 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-gray-200 py-8 sm:py-12">
+    <div className="bg-gray-100 dark:bg-gray-900 py-20 transition-colors duration-300">
       {/* Divider Heading */}
-      <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
+      <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center mb-12 px-4 sm:px-6">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
+        <span className="mx-6 text-gray-800 dark:text-gray-100 text-3xl sm:text-4xl font-bold tracking-tight">
           About Me
         </span>
-        <div className="flex-grow border-t border-gray-300"></div>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-700"></div>
       </div>
 
       {/* Content Section */}
       <div className="flex flex-col-reverse md:flex-row w-11/12 max-w-5xl mx-auto my-8 gap-8 md:gap-12 px-4 sm:px-6">
         {/* Text block */}
-        <div className="md:w-1/2 space-y-6 text-justify text-sm sm:text-base leading-relaxed">
+        <div className="md:w-1/2 space-y-6 text-justify text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300">
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700">
             I'm a 2nd-year B.Tech student in Information Technology at Narula Institute of Technology, and a backend-focused developer with strong fundamentals. My core stack includes Java, Spring Boot, React, and PostgreSQL, which I leverage to build scalable and efficient applications. With a solid grasp of database architecture—including data modeling, ACID properties, and normalization—I focus on creating robust backend systems alongside intuitive frontends.
           </p>

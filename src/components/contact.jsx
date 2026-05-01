@@ -55,68 +55,68 @@ function Contact() {
   }, [startedTyping]);
 
   return (
-    <div className="w-full py-10 px-4 flex flex-col items-center text-center bg-white">
+    <div className="w-full py-20 px-4 flex flex-col items-center text-center bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       {/* Section Header */}
-      <div className="w-full max-w-5xl flex items-center justify-center mb-8 px-4 sm:px-6">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <span className="mx-4 text-gray-700 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
+      <div className="w-full max-w-5xl flex items-center justify-center mb-12 px-4 sm:px-6">
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
+        <span className="mx-6 text-gray-800 dark:text-gray-100 text-3xl sm:text-4xl font-bold tracking-tight">
           Contact
         </span>
-        <div className="flex-grow border-t border-gray-300"></div>
+        <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
       </div>
 
       {/* Contact Message */}
-      <div className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 px-4 text-gray-700 mb-6">
-        <p ref={textRef} className="text-sm sm:text-base md:text-lg leading-relaxed">
+      <div className="w-full sm:w-4/5 md:w-2/3 lg:w-1/2 px-4 text-gray-700 dark:text-gray-300 mb-8">
+        <p ref={textRef} className="text-lg sm:text-xl leading-relaxed font-medium">
           {typedText || fullText[0]}
         </p>
       </div>
 
       {/* Write Message Button */}
       <button
-        className="mb-6 border border-gray-300 text-sm sm:text-base text-gray-800 px-6 py-2 rounded shadow-sm 
-                   hover:bg-gray-300 hover:scale-105 transition duration-200 ease-in-out"
+        className="mb-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3 rounded-xl font-bold
+                   hover:scale-105 transition-all duration-300 shadow-lg"
       >
         Write message
       </button>
 
       {/* Social Icons */}
-      <div className="flex gap-4 flex-wrap justify-center">
+      <div className="flex gap-6 flex-wrap justify-center">
         <a
           href="https://github.com/Adey1400"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 flex items-center justify-center border border-gray-400 rounded-full text-gray-600 
-              hover:bg-gray-700 hover:text-white transition duration-200 ease-in-out"
+          className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
+              hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-sm"
         >
-          <FaGithub className="w-4 h-4" />
+          <FaGithub className="w-5 h-5" />
         </a>
         <a
           href="https://www.facebook.com/subhankito.roychoudhury"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 flex items-center justify-center border border-gray-400 rounded-full  text-gray-600
-              hover:bg-gray-700 hover:text-white transition duration-200 ease-in-out"
+          className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
+              hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-sm"
         >
-          <FaFacebookF className="w-4 h-4" />
+          <FaFacebookF className="w-5 h-5" />
         </a>
         <a
           href="https://www.linkedin.com/in/subhankito-roy-choudhury-96144a314/recent-activity/all/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 flex items-center justify-center border border-gray-400 rounded-full text-gray-600
-              hover:bg-gray-700 hover:text-white transition duration-200 ease-in-out"
+          className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
+              hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-sm"
         >
-          <FaLinkedinIn className="w-4 h-4" />
+          <FaLinkedinIn className="w-5 h-5" />
         </a>
         <a
           href="https://www.instagram.com/_._.adeyy._/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-9 h-9 flex items-center justify-center border  border-gray-400 rounded-full text-gray-600
-              hover:bg-gray-700 hover:text-white transition duration-200 ease-in-out"
+          className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
+              hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition-all duration-300 shadow-sm"
         >
-          <FaInstagram className="w-4 h-4" />
+          <FaInstagram className="w-5 h-5" />
         </a>
       </div>
     </div>

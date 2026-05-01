@@ -26,24 +26,28 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section className="bg-white text-gray-700 py-12">
+    <section className="bg-white dark:bg-gray-950 text-gray-700 dark:text-gray-300 py-20 transition-colors duration-300">
       <div className="max-w-5xl mx-auto px-4 text-center">
-        <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center my-6 px-4 sm:px-6">
-          <div className="flex-grow border-t border-gray-300"></div>
-          <span className="mx-4 text-gray-600 text-2xl sm:text-3xl font-semibold whitespace-nowrap">
+        <div className="w-11/12 max-w-5xl mx-auto flex items-center justify-center mb-12 px-4 sm:px-6">
+          <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
+          <span className="mx-6 text-gray-800 dark:text-gray-100 text-3xl sm:text-4xl font-bold tracking-tight">
             My Skills
           </span>
-          <div className="flex-grow border-t border-gray-300"></div>
+          <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-12 gap-x-8">
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center space-y-2 hover:scale-105 transition-transform duration-300 hover:text-gray-900"
+              className="flex flex-col items-center justify-center hover:scale-110 transition-all duration-300 group"
             >
-              <div>{skill.icon}</div>
-              <p className="text-sm font-medium">{skill.name}</p>
+              <div className="mb-3 text-gray-600 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {skill.icon}
+              </div>
+              <p className="text-sm font-medium tracking-wide text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
+                {skill.name}
+              </p>
             </div>
           ))}
         </div>
