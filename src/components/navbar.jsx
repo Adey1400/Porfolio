@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import profileImage from "../assets/profile.png";
-import Resume from "../assets/Resume.pdf";
+import Resume from "../assets/Resume .pdf"
 import { Menu, X, Sun, Moon } from "lucide-react";
 
 const Navbar = ({ darkMode, setDarkMode }) => {
