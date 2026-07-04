@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 function Contact() {
-  const fullText = `I’m actively looking for opportunities where I can contribute and grow. Please feel free to reach out if you have any openings or collaborations in mind.`;
+  const fullText = `I’m actively looking for opportunities where I can contribute and grow in backend engineering, distributed systems, and scalable product development.`;
   const [typedText, setTypedText] = useState("");
   const [startedTyping, setStartedTyping] = useState(false);
   const textRef = useRef(null);
@@ -73,17 +73,20 @@ function Contact() {
       </div>
 
       {/* Write Message Button */}
-      <button
-        className="mb-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-3 rounded-xl font-bold
-                   hover:scale-105 transition-all duration-300 shadow-lg"
+      <a
+        href="https://www.linkedin.com/in/subhankito-roy-choudhury-96144a314/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mb-12 rounded-xl bg-gray-900 px-8 py-3 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:bg-white dark:text-gray-900 dark:hover:bg-blue-400"
       >
-        Write message
-      </button>
+        Let’s Connect
+      </a>
 
       {/* Social Icons */}
       <div className="flex gap-6 flex-wrap justify-center">
         <a
           href="https://github.com/Adey1400"
+          aria-label="GitHub"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
@@ -93,6 +96,7 @@ function Contact() {
         </a>
         <a
           href="https://www.facebook.com/subhankito.roychoudhury"
+          aria-label="Facebook"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
@@ -102,6 +106,7 @@ function Contact() {
         </a>
         <a
           href="https://www.linkedin.com/in/subhankito-roy-choudhury-96144a314/recent-activity/all/"
+          aria-label="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300
@@ -111,6 +116,7 @@ function Contact() {
         </a>
         <a
           href="https://www.instagram.com/_._.adeyy._/"
+          aria-label="Instagram"
           target="_blank"
           rel="noopener noreferrer"
           className="w-12 h-12 flex items-center justify-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl text-gray-700 dark:text-gray-300

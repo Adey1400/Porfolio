@@ -17,6 +17,7 @@ const projects = [
     image: AetherVault,
     description:
       "A highly secure, zero-knowledge password manager. Features client-side AES-256 encryption so the backend only stores mathematical blobs. Includes dual authentication (JWT & Google OAuth2) and a dynamic UI.",
+    highlights: ["Secure auth", "Zero-knowledge design", "Modern UI"],
     github: "https://github.com/Adey1400/AetherVault",
   },
   {
@@ -25,6 +26,7 @@ const projects = [
     image: Library,
     description:
       "A robust full-stack system featuring secure JWT authentication, role-based dashboards for Librarians and Students, and automated book issuing workflows. Built with a Spring Boot backend.",
+    highlights: ["Role-based access", "Workflow automation", "REST APIs"],
     github: "https://github.com/Adey1400/library_management",
   },
   {
@@ -33,6 +35,7 @@ const projects = [
     image: BlogImage,
     description:
       "A full-stack blog app with Appwrite authentication, protected routes, responsive UI, and blog CRUD functionality. Features include image uploads and rich text editing.",
+    highlights: ["Protected routes", "CRUD flows", "Modern UX"],
     github: "https://github.com/Adey1400/react-blog-app",
     demo: "https://simple-blog-ochre.vercel.app/login",
   },
@@ -42,6 +45,7 @@ const projects = [
     image: newsAppImage,
     description:
       "A responsive news application built with React and Redux Toolkit. It features real-time news fetching using News API, smooth category filtering, and modern UI.",
+    highlights: ["API-driven UI", "Filtering UX", "Responsive design"],
     github: "https://github.com/Adey1400/Newsify",
     demo: "https://newsify-rho.vercel.app"
   },
@@ -52,6 +56,7 @@ const projects = [
     image: ChatImage,
     description:
       "A real-time chat application with public messaging room, typing indicator, and secure user authentication. Built using Appwrite for backend services.",
+    highlights: ["Real-time chat", "Auth flows", "Interactive UX"],
     github: "https://github.com/Adey1400/ChatBox",
   },
   {
@@ -60,6 +65,7 @@ const projects = [
     image: PasswordImage,
     description:
       "A simple yet powerful password generator tool that allows users to customize length and character types for secure passwords.",
+    highlights: ["Security-focused", "Input customization", "Clean UX"],
     github: "https://github.com/Adey1400/Password-Generator",
   },
 
@@ -101,13 +107,17 @@ const Projects = () => {
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
-      <div className="w-11/12 max-w-6xl mx-auto flex items-center justify-center mb-16">
+      <div className="w-11/12 max-w-6xl mx-auto flex items-center justify-center mb-10">
         <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
         <span className="mx-6 text-gray-800 dark:text-gray-100 text-3xl sm:text-4xl font-bold tracking-tight">
           Featured Projects
         </span>
         <div className="flex-grow border-t border-gray-300 dark:border-gray-800"></div>
       </div>
+
+      <p className="mx-auto mb-12 max-w-2xl text-center text-sm sm:text-base text-gray-600 dark:text-gray-400">
+        I focus on building backend-ready, production-minded applications that combine secure architecture, clean APIs, and polished user experiences.
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {projects.map((project, index) => (
@@ -120,6 +130,8 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={project.name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
@@ -134,9 +146,19 @@ const Projects = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 {project.name}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-3 flex-grow">
+              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3 flex-grow">
                 {project.description}
               </p>
+
+              {project.highlights && (
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {project.highlights.map((highlight) => (
+                    <span key={highlight} className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-gray-600 dark:bg-gray-800 dark:text-gray-300">
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
+              )}
               
               <div className="flex items-center gap-4 pt-4 border-t border-gray-50 dark:border-gray-900">
                 <a

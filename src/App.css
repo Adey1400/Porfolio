@@ -2,27 +2,54 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* optional but helpful */
-   scroll-behavior: smooth;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 5rem;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
+  color: inherit;
+}
+
+img {
+  display: block;
+}
 @keyframes blink-caret {
-  0%, 100% { border-color: transparent }
-  50% { border-color: white }
+  0%, 100% { opacity: 0 }
+  50% { opacity: 1 }
 }
 
-.typewriter-text {
-  overflow: hidden;
+.typing-line {
+  display: inline-block;
   white-space: nowrap;
-  width: 0;
-  border-right: 2px solid white;
   text-align: center;
-  margin: 0 auto; /* Center the growing block */
-  animation:
-    typing 4s steps(50, end) forwards, /* ⬅ slower & smoother */
-    blink-caret 0.75s step-end infinite;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 0.6ch;
+  margin-left: 0.15rem;
+  border-right: 2px solid currentColor;
+  animation: blink-caret 0.8s step-end infinite;
+  opacity: 1;
+}
+
+.tech-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.dark .tech-pill {
+  background: rgba(15, 23, 42, 0.45);
+  border-color: rgba(148, 163, 184, 0.18);
 }

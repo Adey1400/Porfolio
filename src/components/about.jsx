@@ -34,26 +34,38 @@ const About = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col-reverse md:flex-row w-11/12 max-w-5xl mx-auto my-8 gap-8 md:gap-12 px-4 sm:px-6">
+      <div className="flex flex-col-reverse md:flex-row w-11/12 max-w-5xl mx-auto my-8 gap-8 md:gap-12 px-4 sm:px-6 items-center">
         {/* Text block */}
-        <div className="md:w-1/2 space-y-6 text-justify text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300">
+        <div className="md:w-1/2 space-y-5 text-left text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300">
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700">
-            I'm a 2nd-year B.Tech student in Information Technology at Narula Institute of Technology, and a backend-focused developer with strong fundamentals. My core stack includes Java, Spring Boot, React, and PostgreSQL, which I leverage to build scalable and efficient applications. With a solid grasp of database architecture—including data modeling, ACID properties, and normalization—I focus on creating robust backend systems alongside intuitive frontends.
+            Hi, I'm Subhankito Roy Choudhury.
           </p>
 
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 delay-100">
-            I practice Data Structures and Algorithms in Java daily to sharpen my problem-solving skills and stay ahead of the curve. I enjoy taking complex problems and converting them into elegant, performant solutions while maintaining clean code standards.
+            I'm an Information Technology student passionate about backend engineering and distributed systems.
           </p>
 
           <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 delay-200">
-            Outside of tech, I enjoy playing guitar, listening to music, and working on creative side projects. I love collaborating with others and believe that learning together builds stronger solutions and better teams.
+            I specialize in Java, Spring Boot, PostgreSQL, REST APIs and Microservices.
           </p>
+
+          <p className="fade-in opacity-0 translate-y-6 transition-all duration-700 delay-300">
+            Currently I'm building production-style backend applications using Redis, Docker and NGINX while continuously learning System Design.
+          </p>
+
+          <div className="fade-in flex flex-wrap gap-2 opacity-0 translate-y-6 transition-all duration-700 delay-400">
+            {['Backend Engineering', 'Distributed Systems', 'Java & Spring Boot', 'System Design'].map((item) => (
+              <span key={item} className="rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-gray-700 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-300">
+                {item}
+              </span>
+            ))}
+          </div>
         </div>
 
         {/* Image block */}
-        <div className="w-full md:w-1/2 flex justify-center items-center">
+        <div className="w-full md:w-1/2 flex justify-center items-center fade-in opacity-0 translate-y-6 transition-all duration-700 delay-150">
           <img
-            className="w-full rounded-md aspect-square object-cover"
+            className="w-full max-w-md rounded-md aspect-square object-cover shadow-lg"
             src={Profilephoto}
             alt="Subhankito"
           />

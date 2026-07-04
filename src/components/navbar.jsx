@@ -11,7 +11,6 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   };
 
   const toggleDarkMode = () => {
-    console.log("Toggling theme. Current mode:", darkMode ? "Dark" : "Light");
     setDarkMode(!darkMode);
   };
 
@@ -51,11 +50,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   );
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white dark:bg-gray-950 shadow-sm text-gray-900 dark:text-gray-100 z-50 transition-colors duration-300 border-b border-gray-100 dark:border-gray-900">
+    <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md dark:bg-gray-950/90 shadow-sm text-gray-900 dark:text-gray-100 z-50 transition-colors duration-300 border-b border-gray-100 dark:border-gray-900">
       <div className="flex items-center justify-between px-4 py-3 sm:px-6 md:py-4 max-w-screen-xl mx-auto relative">
         {/* Left - Logo */}
         <div className="flex items-center flex-shrink-0">
-          <a href="#home">
+          <a href="#home" aria-label="Go to home section">
             <img className="w-8 sm:w-10 rounded-full border border-gray-200 dark:border-gray-800" src={profileImage} alt="Logo" />
           </a>
         </div>
